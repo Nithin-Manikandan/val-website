@@ -58,10 +58,22 @@
 
 .founders-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
-  max-width: 1400px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1600px;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .founders-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .founders-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .founder-card {
@@ -209,10 +221,6 @@
 
   .about-subtitle {
     font-size: 1.2rem;
-  }
-
-  .founders-grid {
-    grid-template-columns: 1fr;
   }
 
   .values-grid {
