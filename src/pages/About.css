@@ -58,8 +58,10 @@
 
 .founders-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .founder-card {
@@ -70,6 +72,9 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .founder-card:nth-child(1) { animation-delay: 0.1s; }
@@ -99,6 +104,9 @@
 
 .founder-info {
   padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .founder-info h3 {
@@ -118,7 +126,9 @@
 
 .founder-bio {
   color: var(--gray-color);
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  text-align: justify;
 }
 
 .values {
