@@ -89,7 +89,7 @@ function Sessions() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="btn btn-primary">
+                <Link to="/login" className="btn btn-primary">
                   Get Started
                 </Link>
               </div>
