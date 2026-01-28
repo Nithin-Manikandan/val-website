@@ -327,7 +327,7 @@ td {
 }
 
 /* Stats Grid for Admin Dashboard */
-.stats-grid {
+.admin-dashboard .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -335,18 +335,18 @@ td {
 }
 
 @media (max-width: 992px) {
-  .stats-grid {
+  .admin-dashboard .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .stats-grid {
+  .admin-dashboard .stats-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.stats-grid .stat-card {
+.admin-dashboard .stats-grid .stat-card {
   background: white;
   padding: 1.5rem;
   border-radius: 12px;
@@ -357,12 +357,12 @@ td {
   transition: all 0.3s ease;
 }
 
-.stats-grid .stat-card:hover {
+.admin-dashboard .stats-grid .stat-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
-.stats-grid .stat-icon {
+.admin-dashboard .stats-grid .stat-icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -376,7 +376,7 @@ td {
   flex-shrink: 0;
 }
 
-.stats-grid .stat-info h3 {
+.admin-dashboard .stats-grid .stat-info h3 {
   font-size: 2rem;
   margin: 0;
   background: linear-gradient(135deg, #00f5d4 0%, #00d4aa 100%);
@@ -385,7 +385,7 @@ td {
   background-clip: text;
 }
 
-.stats-grid .stat-info p {
+.admin-dashboard .stats-grid .stat-info p {
   margin: 0;
   color: var(--gray-color);
   font-size: 0.9rem;
