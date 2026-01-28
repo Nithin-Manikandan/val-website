@@ -5,19 +5,19 @@ function About() {
     {
       name: 'Adrien Chung',
       role: 'Co-Founder',
-      bio: 'Adrien is a passionate Highschooler who likes helping others. When he was a freshman, he noticed that people with good GPAs had something in common. Through this observation, Adrien and his peers gathered up and did countless hours of research on how you could be the top of your class.',
+      bio: 'Adrien is a passionate high schooler who loves helping others succeed. As a freshman, he noticed patterns among top students and researched what makes them excel. Through VAL, he shares these proven strategies to help you reach the top of your class.',
       image: '/founders/adrien.jpg'
     },
     {
       name: 'Nithin Manikandan',
       role: 'Co-Founder',
-      bio: "Nithin is a high school student who learned early on that success isn't about working harder — it's about knowing what actually matters. By going through the highs and lows of the academic system himself, he discovered the patterns that consistently lead to stronger grades and less stress. Instead of relying on trial and error, he broke down what worked, what didn't, and why. Through VAL, Nithin now helps incoming students start high school with clarity, confidence, and a smarter plan from the very beginning.",
+      bio: "Nithin learned early that success isn't about working harder—it's about knowing what actually matters. By navigating the academic system himself, he discovered patterns that lead to stronger grades and less stress. Through VAL, he helps incoming students start high school with clarity, confidence, and a smarter plan.",
       image: '/founders/nithin.jpg'
     },
     {
       name: 'Yashas Karre',
       role: 'Co-Founder',
-      bio: "Yashas is a high schooler who believes the best way to lead is through experience. After navigating the system firsthand, he identified the exact shifts that separate a good GPA from an elite one. By analyzing where he could have moved faster and worked smarter, he developed a precise strategy that eliminates the guesswork. Now, Yashas provides the high-level roadmap he used to master the classroom, giving students a direct path to the top that he's already paved.",
+      bio: "Yashas believes the best way to lead is through experience. After navigating the system firsthand, he identified the exact shifts that separate good GPAs from elite ones. Through VAL, he provides the high-level roadmap he used to master the classroom, giving students a direct path to the top.",
       image: '/founders/yashas.jpg'
     }
   ]
