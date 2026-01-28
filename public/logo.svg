@@ -1,0 +1,22 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="500" fill="#00f5d4"/>
+  
+  <!-- Graduation Cap -->
+  <g transform="translate(250, 150)">
+    <!-- Cap top -->
+    <path d="M -150 0 L 0 -50 L 150 0 L 0 50 Z" fill="#1a1a1a" stroke="#000" stroke-width="8"/>
+    <!-- Cap base -->
+    <rect x="-100" y="0" width="200" height="80" rx="10" fill="#1a1a1a" stroke="#000" stroke-width="6"/>
+    <!-- Tassel -->
+    <circle cx="150" cy="-30" r="15" fill="#1a1a1a"/>
+    <line x1="150" y1="-15" x2="150" y2="30" stroke="#1a1a1a" stroke-width="4"/>
+  </g>
+  
+  <!-- VAL Text -->
+  <text x="250" y="350" font-family="Arial, sans-serif" font-size="120" font-weight="bold" text-anchor="middle" fill="#1a1a1a">VAL</text>
+  
+  <!-- Tagline -->
+  <text x="250" y="420" font-family="Arial, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#1a1a1a" letter-spacing="2">STRESS LESS. START STRONG</text>
+</svg>
+

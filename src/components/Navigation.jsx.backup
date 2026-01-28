@@ -1,0 +1,108 @@
+import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
+import './Navigation.css'
+
+function Navigation() {
+  const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+  const { user, isAdmin, profile } = useAuth()
+
+  console.log('Navigation - user:', user)
+  console.log('Navigation - profile:', profile)
+  console.log('Navigation - isAdmin:', isAdmin)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
+  const isActive = (path) => {
+    return location.pathname === path ? 'active' : ''
+  }
+
+  return (
+    <nav className="navbar">
+      <div className="container">
+        <div className="nav-wrapper">
+          <Link to="/" className="logo" onClick={closeMenu}>
+            <img src="/val-logo.png" alt="VAL Logo" className="logo-img" />
+            <div className="logo-text">
+              <span className="logo-name">VAL</span>
+              <span className="logo-tagline">Stress Less, Start Strong</span>
+            </div>
+          </Link>
+
+          <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+            <span className={`hamburger ${isOpen ? 'open' : ''}`}></span>
+          </button>
+
+          <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
+            <li>
+              <Link to="/" className={isActive('/')} onClick={closeMenu}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className={isActive('/about')} onClick={closeMenu}>
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/why-us" className={isActive('/why-us')} onClick={closeMenu}>
+                Why Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/sessions" className={isActive('/sessions')} onClick={closeMenu}>
+                Sessions & Pricing
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className={isActive('/contact')} onClick={closeMenu}>
+                Contact
+              </Link>
+            </li>
+
+            {/* Auth-aware navigation */}
+            {!user ? (
+              <>
+                <li>
+                  <Link to="/login" className={isActive('/login')} onClick={closeMenu}>
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/signup" className={`${isActive('/signup')} btn btn-primary`} onClick={closeMenu}>
+                    Sign Up
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/dashboard" className={isActive('/dashboard')} onClick={closeMenu}>
+                    Dashboard
+                  </Link>
+                </li>
+                {isAdmin && (
+                  <li>
+                    <Link to="/admin" className={`${isActive('/admin')} btn btn-primary`} onClick={closeMenu}>
+                      Admin
+                    </Link>
+                  </li>
+                )}
+              </>
+            )}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  )
+}
+
+export default Navigation
+
